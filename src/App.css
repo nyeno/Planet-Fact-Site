@@ -1,7 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&family=League+Spartan:wght@400;500;700&display=swap');
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing:border-box; 
+}
 .App{
-    background-image: url("./assets/background-stars.svg");
+    background-image: url("/src/assets/background-stars.svg");
     background-size: cover;
-    background-color: "#070724";
+    background-color: #070724;
+    height:100vh
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
 }

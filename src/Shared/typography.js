@@ -42,7 +42,7 @@ export const H4 = styled.h4`
   color: ${colors.white};
 `;
 
-export const p = styled.p`
+export const P = styled.p`
   font-family: "Spartan";
   font-style: normal;
   font-size: 0.875rem;
