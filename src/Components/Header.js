@@ -4,37 +4,44 @@ import styled from "styled-components";
 import { colors } from "../Shared/colors";
 import { H1, H2, H3, H4, P } from "../Shared/typography";
 import nav from "../assets/icon-hamburger.svg"
+import PhoneNav from "./PhoneNav";
 import { Link } from "react-router-dom";
 const Header = ({}) => {
+
+  //managing states
   const [hamClicked, setHamClicked]= useState(false)
   const handleHamClick =()=>{
     setHamClicked(!hamClicked)
   }
 
+
   return (
-    <StyledHeader>
-      <Logo>
-        <H2>The planets</H2>
-      </Logo>
-      <Nav>
-       <Link to={`/mercury`}><H4>Mercury</H4></Link>
-       <Link to={`/venus`}> <H4>Venus</H4></Link>
-       <Link to={`/earth`}><H4>Earth</H4></Link>
-       <Link to={`/mars`}><H4>Mars</H4></Link>
-       <Link to={`/jupiter`}> <H4>Jupiter</H4></Link>
-       <Link to={`/saturn`}><H4>Saturn</H4></Link>
-       <Link to={`/uranus`}><H4>Uranus</H4></Link>
-       <Link to={`/neptune`}> <H4>Neptune</H4></Link>
-      </Nav>
-      <HamBurger hamClicked={hamClicked}>
-        <img onClick={handleHamClick} src= {nav} />
-      </HamBurger>
-    </StyledHeader>
+    <div>
+      <StyledHeader>
+        <Logo>
+          <H2>The planets</H2>
+        </Logo>
+        <Nav>
+        <Link className="Link" to={`/mercury`}><H4>Mercury</H4></Link>
+        <Link className="Link" to={`/venus`}> <H4>Venus</H4></Link>
+        <Link className="Link" to={`/earth`}><H4>Earth</H4></Link>
+        <Link className="Link" to={`/mars`}><H4>Mars</H4></Link>
+        <Link className="Link" to={`/jupiter`}> <H4>Jupiter</H4></Link>
+        <Link className="Link" to={`/saturn`}><H4>Saturn</H4></Link>
+        <Link className="Link" to={`/uranus`}><H4>Uranus</H4></Link>
+        <Link className="Link" to={`/neptune`}> <H4>Neptune</H4></Link>
+        </Nav>
+        <HamBurger hamClicked={hamClicked}>
+          <img onClick={handleHamClick} src= {nav} />
+        </HamBurger>
+      </StyledHeader>
+      
+    </div>
+    
   );
 };
 
-
-export const StyledHeader= styled.header`
+const StyledHeader= styled.header`
   color: ${colors.white};
   background-color: ${(props) =>
     props.active ? props.activeColor : props.background};

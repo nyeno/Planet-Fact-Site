@@ -13,20 +13,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <div style={{
-        display:"flex",
-        flexDirection:'column'
-      }}>
-       <Link to={`/mercury`}>mercury</Link>
-       <Link to={`/venus`}>venus</Link>
-       <Link to={`/earth`}>earth</Link>
-       <Link to={`/mars`}>mars</Link>
-       <Link to={`/jupiter`}>jupiter</Link>
-       <Link to={`/saturn`}>saturn</Link>
-       <Link to={`/uranus`}>uranus</Link>
-       <Link to={`/neptune`}>neptune</Link>
-      </div>
-     
       <PlanetBodyTemplate/>
     </div>
   );

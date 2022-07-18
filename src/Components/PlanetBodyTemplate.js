@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import styled from "styled-components";
 import data from '../data.json'
 import { useParams } from "react-router-dom";
+
 function PlanetBodyTemplate() {
   const [currentPage,setCurrentPage]=useState(null)
   const [templateData,setTemplateData]=useState('')
