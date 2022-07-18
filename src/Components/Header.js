@@ -62,6 +62,7 @@ const Nav = styled.nav`
   }
   @media only screen and (min-width: 768px){
     flex: 1;
+    margin-top: 0.725em;
   }
 `
 
