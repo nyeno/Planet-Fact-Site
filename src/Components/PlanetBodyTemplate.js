@@ -3,14 +3,17 @@ import styled from "styled-components";
 import data from '../data.json'
 import { useParams } from "react-router-dom";
 
-function PlanetBodyTemplate() {
-  const [currentPage,setCurrentPage]=useState(null)
-  const [templateData,setTemplateData]=useState('')
+const PlanetBodyTemplate = ({}) => {
+  const [currentPage, setCurrentPage]=useState(null)
+  const [templateData, setTemplateData]=useState('')
+
   const params = useParams();
+
   useEffect(()=>{
     const id =params.id
     setCurrentPage(id)
  },[params])
+ 
   useEffect(()=>{
     if(currentPage){
      let currentData=data.filter(

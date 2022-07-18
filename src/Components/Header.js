@@ -4,16 +4,14 @@ import styled from "styled-components";
 import { colors } from "../Shared/colors";
 import { H1, H2, H3, H4, P } from "../Shared/typography";
 import nav from "../assets/icon-hamburger.svg"
-import PhoneNav from "./PhoneNav";
 import { Link } from "react-router-dom";
-const Header = ({}) => {
+import PhoneNav from "./PhoneNav";
 
-  //managing states
+const Header = ({}) => {
   const [hamClicked, setHamClicked]= useState(false)
   const handleHamClick =()=>{
     setHamClicked(!hamClicked)
   }
-
 
   return (
     <div>
@@ -34,14 +32,15 @@ const Header = ({}) => {
         <HamBurger hamClicked={hamClicked}>
           <img onClick={handleHamClick} src= {nav} />
         </HamBurger>
-      </StyledHeader>
-      
+    </StyledHeader>
+    
     </div>
     
   );
 };
 
-const StyledHeader= styled.header`
+
+export const StyledHeader= styled.header`
   color: ${colors.white};
   background-color: ${(props) =>
     props.active ? props.activeColor : props.background};
@@ -55,8 +54,9 @@ const StyledHeader= styled.header`
     align-items:center;
     padding: 1.5em 1.5em;
   }
-  @media only screen and (min-width: 1440px){
+  @media only screen and (min-width: 1024px){
     flex-direction: row;
+    padding: 1em 1.5em;
   }
 `;
 
@@ -73,9 +73,9 @@ const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
   }
-  @media only screen and (min-width: 768px){
+  @media only screen and (min-width: 1024px){
     flex: 1;
-    margin-top: 0.725em;
+    margin-top: 0.8em;
   }
 `
 
