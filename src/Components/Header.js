@@ -1,27 +1,33 @@
 /* eslint-disable */
+import React, {useState} from "react";
 import styled from "styled-components";
 import { colors } from "../Shared/colors";
 import { H1, H2, H3, H4, P } from "../Shared/typography";
 import nav from "../assets/icon-hamburger.svg"
-
+import { Link } from "react-router-dom";
 const Header = ({}) => {
+  const [hamClicked, setHamClicked]= useState(false)
+  const handleHamClick =()=>{
+    setHamClicked(!hamClicked)
+  }
+
   return (
     <StyledHeader>
       <Logo>
         <H2>The planets</H2>
       </Logo>
       <Nav>
-        <H4>Mercury</H4>
-        <H4>Venus</H4>
-        <H4>Earth</H4>
-        <H4>Mars</H4>
-        <H4>Jupiter</H4>
-        <H4>Saturn</H4>
-        <H4>Uranus</H4>
-        <H4>Neptune</H4>
+       <Link to={`/mercury`}><H4>Mercury</H4></Link>
+       <Link to={`/venus`}> <H4>Venus</H4></Link>
+       <Link to={`/earth`}><H4>Earth</H4></Link>
+       <Link to={`/mars`}><H4>Mars</H4></Link>
+       <Link to={`/jupiter`}> <H4>Jupiter</H4></Link>
+       <Link to={`/saturn`}><H4>Saturn</H4></Link>
+       <Link to={`/uranus`}><H4>Uranus</H4></Link>
+       <Link to={`/neptune`}> <H4>Neptune</H4></Link>
       </Nav>
-      <HamBurger>
-        <img src= {nav} />
+      <HamBurger hamClicked={hamClicked}>
+        <img onClick={handleHamClick} src= {nav} />
       </HamBurger>
     </StyledHeader>
   );
@@ -67,9 +73,12 @@ const Nav = styled.nav`
 
 const HamBurger = styled.section`
   margin: auto 0;
+  transition: ease-in-out 250ms;
   @media only screen and (min-width: 768px){
     display: none;
   }
+  opacity:${(props) =>
+    props.hamClicked?0.2 : 1};
 `
 
 export default Header;
