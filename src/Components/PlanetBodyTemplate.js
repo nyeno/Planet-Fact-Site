@@ -9,7 +9,7 @@ import { colors } from '../Shared/colors';
 const PlanetBodyTemplate = ({}) => {
   const [currentPage, setCurrentPage] =useState(null)
   const [templateData, setTemplateData]=useState(data[0])
-
+  
   const params = useParams();
 
   //let myData = data[0];
@@ -33,7 +33,7 @@ const PlanetBodyTemplate = ({}) => {
   const [isActive, onSetActive] = useState(false);
 
   const handleClick = (e) =>{
-      onSetActive(true)
+      onSetActive(!isActive)
       console.log(isActive)
   }
   return (
@@ -45,7 +45,7 @@ const PlanetBodyTemplate = ({}) => {
       <BodyRight>
           <H1> {templateData.name} </H1>
           <P> {templateData.overview.content} </P>
-          <Button activeColor={colors.mercury} setActive = {handleClick} active={false} hoverColor={colors.darkGrey}>overview</Button>
+          <Button activeColor={colors.mercury} setActive = {handleClick} active={isActive} hoverColor={colors.darkGrey}>overview</Button>
       </BodyRight>
      </div>
 
