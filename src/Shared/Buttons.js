@@ -17,10 +17,7 @@ const Button = ({
       activeColor={activeColor}
       hoverColor={hoverColor}
       active={active}
-      onClick={() => {
-        //console.log("here");
-        setActive(!active);
-      }}
+      onClick={setActive}
     >
       {children}
     </StyledButton>
@@ -39,6 +36,7 @@ export const StyledButton = styled.div`
     cursor: pointer;
     transition: ease-in-out 250ms;
   }
+
 `;
 export default Button;
 

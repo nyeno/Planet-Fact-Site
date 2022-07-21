@@ -8,7 +8,7 @@ import Header from "./Components/Header";
 import PlanetBodyTemplate from "./Components/PlanetBodyTemplate";
 import { Link } from "react-router-dom";
 function App() {
-  const [active, setActive] = useState(false);
+ 
 
   return (
     <div className="App">

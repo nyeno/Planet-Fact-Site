@@ -12,8 +12,8 @@ const PlanetBodyTemplate = ({}) => {
 
   const params = useParams();
 
-  let myData = data[0];
-  console.log(templateData)
+  //let myData = data[0];
+  //console.log(templateData)
 
   useEffect(()=>{
     const id =params.id
@@ -30,11 +30,12 @@ const PlanetBodyTemplate = ({}) => {
     }
   },[currentPage])
 
-  const [active, setActive] = useState(false);
+  const [isActive, onSetActive] = useState(false);
 
   const handleClick = (e) =>{
-        
-    }
+      onSetActive(true)
+      console.log(isActive)
+  }
   return (
     <div>
      <div> 
@@ -44,7 +45,7 @@ const PlanetBodyTemplate = ({}) => {
       <BodyRight>
           <H1> {templateData.name} </H1>
           <P> {templateData.overview.content} </P>
-          <Button activeColor={colors.mercury} onClick = {handleClick}>overview</Button>
+          <Button activeColor={colors.mercury} setActive = {handleClick} active={false} hoverColor={colors.darkGrey}>overview</Button>
       </BodyRight>
      </div>
 
