@@ -48,6 +48,5 @@ export const P = styled.p`
   font-size: 0.875rem;
   line-height: 1.5625rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: ${colors.white};
 `;

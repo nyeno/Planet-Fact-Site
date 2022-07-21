@@ -33,7 +33,7 @@ const Header = ({}) => {
           <img onClick={handleHamClick} src= {nav} />
         </HamBurger>
     </StyledHeader>
-    
+   
     </div>
     
   );

@@ -26,7 +26,7 @@ const PhoneNav = ({}) => {
 const Nav = styled.nav`
     
 `
-const StyledLink = styled.Link`
+const StyledLink = styled(Link)`
     background-color: red;
 `
 
