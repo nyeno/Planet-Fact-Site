@@ -35,6 +35,11 @@ export const StyledButton = styled.div`
   transition: ease-in-out 250ms;
   display:flex;
   justify-content:center;
+<<<<<<< HEAD
+=======
+  width:${(props) =>
+    props.width ?? '100px'};;
+>>>>>>> 0fbfcea73e0a9cb27a9eb638f77b95f50d9e5071
   &:hover {
     background: ${(props) => props.hoverColor};
     cursor: pointer;
