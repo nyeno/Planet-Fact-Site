@@ -12,8 +12,8 @@ const PlanetBodyTemplate = ({}) => {
   
   const params = useParams();
 
-  //let myData = data[0];
-  //console.log(templateData)
+  let myData = `colors.${templateData.name.toLowerCase()}`;
+  console.log(myData)
 
   useEffect(()=>{
     const id =params.id
@@ -33,22 +33,53 @@ const PlanetBodyTemplate = ({}) => {
   const [isActive, onSetActive] = useState(false);
 
   const handleClick = (e) =>{
-      onSetActive(!isActive)
-      console.log(isActive)
+      onSetActive(true)
+      //console.log(isActive)
   }
   return (
     <div>
-     <div> 
+     <section>
       <BodyLeft>
         <img src= {templateData.images.planet} />
       </BodyLeft>
       <BodyRight>
           <H1> {templateData.name} </H1>
           <P> {templateData.overview.content} </P>
-          <Button activeColor={colors.mercury} setActive = {handleClick} active={isActive} hoverColor={colors.darkGrey}>overview</Button>
+          <Button activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleClick} active={isActive} hoverColor={colors.darkGrey}>
+            <H3>
+              <Span>01</Span>Overview
+            </H3>
+          </Button>
+          <Button activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleClick} active={isActive} hoverColor={colors.darkGrey}>
+            <H3>
+              <Span>02</Span>Internal structure
+            </H3>
+          </Button>
+          <Button activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleClick} active={isActive} hoverColor={colors.darkGrey}>
+            <H3>
+              <Span>03</Span>Surface Geology
+            </H3>
+          </Button>
       </BodyRight>
-     </div>
-
+     </section>
+     <section>
+      <Button activeColor={`dark`}  active={true}>
+        <H4>Rotation Time</H4>
+        <H2>{templateData.rotation}</H2>  
+      </Button>
+      <Button activeColor={`dark`}  active={true}>
+        <H4>Revolution Time</H4>
+        <H2>{templateData.revolution}</H2>  
+      </Button>
+      <Button activeColor={`dark`}  active={true}>
+        <H4>Radius</H4>
+        <H2>{templateData.radius}</H2>  
+      </Button>
+      <Button activeColor={`dark`}  active={true}>
+        <H4>Average Temperature</H4>
+        <H2>{templateData.temperature}</H2>  
+      </Button>
+     </section> 
 
     </div>
   )
@@ -58,6 +89,9 @@ const BodyLeft = styled.div`
 `
 const BodyRight = styled.div`
  
+`
+const Span = styled.span`
+  margin-right: 1em;
 `
 
 

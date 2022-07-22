@@ -10,4 +10,5 @@ export const colors = {
   jupiter: "hsl(2 68% 53%)",
   mars: "hsl(10 63% 51%)",
   saturn: "hsl(17 73% 46%)",
+  venus: "hsl(33 82% 61%)"
 };

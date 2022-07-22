@@ -22,7 +22,7 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
-  font-family: "Spartan";
+  font-family: "League Spartan";
   font-style: normal;
   font-weight: 700;
   font-size: 0.75rem;
@@ -32,7 +32,7 @@ export const H3 = styled.h3`
   color: ${colors.white};
 `;
 export const H4 = styled.h4`
-  font-family: "Spartan";
+  font-family: "League Spartan";
   font-style: normal;
   font-weight: 700;
   font-size: 0.6875rem;
@@ -43,7 +43,7 @@ export const H4 = styled.h4`
 `;
 
 export const P = styled.p`
-  font-family: "Spartan";
+  font-family: "League Spartan";
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1.5625rem;
