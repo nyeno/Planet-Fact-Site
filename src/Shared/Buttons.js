@@ -36,7 +36,7 @@ export const StyledButton = styled.div`
   display:flex;
   justify-content:center;
   width:${(props) =>
-    props.width ?? '100px'};;
+    props.width ?? '500px'};;
   &:hover {
     background: ${(props) => props.hoverColor};
     cursor: pointer;
