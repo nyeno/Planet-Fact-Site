@@ -49,4 +49,5 @@ export const P = styled.p`
   line-height: 1.5625rem;
   letter-spacing: 1px;
   color: ${colors.white};
+  text-align: justify;
 `;

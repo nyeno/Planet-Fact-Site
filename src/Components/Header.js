@@ -9,8 +9,10 @@ import PhoneNav from "./PhoneNav";
 
 const Header = ({}) => {
   const [hamClicked, setHamClicked]= useState(false)
+  const [dispNav, setDispNav] = useState(false)
   const handleHamClick =()=>{
     setHamClicked(!hamClicked)
+    setDispNav(!dispNav)
   }
 
   return (
@@ -33,7 +35,7 @@ const Header = ({}) => {
           <img onClick={handleHamClick} src= {nav} />
         </HamBurger>
     </StyledHeader>
-   
+    <PhoneNav display={dispNav}/>
     </div>
     
   );

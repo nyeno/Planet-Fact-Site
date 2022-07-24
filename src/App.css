@@ -8,8 +8,37 @@
     background-image: url("/src/assets/background-stars.svg");
     background-size: cover;
     background-color: #070724;
-    height:100vh
+
 }
 .Link{
   text-decoration: none;
+}
+a{
+  color: #838391;
+  margin: 0 0.5em;
+}
+.planet-fact{
+  padding: 5em 10vw 3em 10vw;
+}
+.section1{
+  display: flex;
+  flex: 1;
+  margin-bottom: 4em;
+  @media only screen and (min-width: 768px){
+    flex-direction: column;
+    align-items:center;
+  }
+  @media only screen and (min-width: 1024px){
+    flex-direction: row;
+    justify-content: center
+  }
+}
+.section2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+  @media only screen and (min-width: 1024px){
+    padding: 1em 1.5em;
+    
+  }
 }

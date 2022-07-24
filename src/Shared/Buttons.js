@@ -16,7 +16,6 @@ const Button = ({
       color={color}
       background={background}
       activeColor={activeColor}
-      hoverColor={hoverColor}
       active={active}
       onClick={setActive}
       width={width}
@@ -30,19 +29,19 @@ export const StyledButton = styled.div`
   color: ${colors.white};
   background-color: ${(props) =>
     props.active ? colors[props.activeColor] : props.background};
-  border: 1px solid ${colors['lightGrey']};
+  border: 1px solid ${colors['darkGrey']};
   padding: 0.625em 1.25em;
   transition: ease-in-out 250ms;
+  margin: 1em 0;
   display:flex;
-  justify-content:center;
-  width:${(props) =>
-    props.width ?? '500px'};;
+  justify-content:left;
+  width: 100%;
   &:hover {
-    background: ${(props) => props.hoverColor};
+    background: ${(props) =>
+      props.active ? colors[props.activeColor] : colors['darkGrey']};
     cursor: pointer;
     transition: ease-in-out 250ms;
   }
-
 `;
 export default Button;
 
