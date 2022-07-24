@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "./colors";
 
-const Button = ({
+const PhoneButton = ({
   children,
   color,
   background,
@@ -26,23 +26,24 @@ const Button = ({
 };
 
 export const StyledButton = styled.div`
-  color: ${colors.white};
-  background-color: ${(props) =>
-    props.active ? colors[props.activeColor] : props.background};
-  border: 1px solid ${colors['darkGrey']};
+& > H4{
+    color: ${(props) =>
+        props.active ? colors['white'] : colors['lightGrey']};
+}
+  border-width: 0 0 0.4em 0;
+  border-style: solid;
+  border-color: ${(props) =>
+    props.active ? colors[props.activeColor] : "transparent"};
   padding: 0.625em 1.25em;
   transition: ease-in-out 250ms;
-  margin: 1em 0;
-  display:flex;
-  justify-content:left;
   width: 100%;
   &:hover {
-    background: ${(props) =>
+    border-color: ${(props) =>
       props.active ? colors[props.activeColor] : colors['darkGrey']};
     cursor: pointer;
     transition: ease-in-out 250ms;
   }
- 
+ text-align: center;
 `;
-export default Button;
+export default PhoneButton;
 

@@ -7,6 +7,7 @@ import { H1, H2, H3, H4, P } from '../Shared/typography';
 import Button from '../Shared/Buttons';
 import { colors } from '../Shared/colors';
 import Image from '../Shared/image';
+import PhoneButton from '../Shared/PhoneButton';
 
 const PlanetBodyTemplate = ({}) => {
   const [currentPage, setCurrentPage] =useState(null)
@@ -78,12 +79,30 @@ const handleGeology = (e) =>{
 
   return (
     <div className='planet-fact'>
+     <PhoneGroup>
+         <PhoneButton activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleOverview} active={isActive}>
+            <H4>
+              Overview
+            </H4>
+          </PhoneButton>
+          <PhoneButton activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleStructure} active={internalActive}>
+            <H4>
+              Structure
+            </H4>
+          </PhoneButton>
+          <PhoneButton activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleGeology} active={surfaceActive}>
+            <H4>
+            Surface
+            </H4>
+          </PhoneButton>
+     </PhoneGroup> 
      <section className='section1'>
       <BodyLeft>
         <Image src= {imgSrc} display={true} />
         <Image src= {templateData.images.geology} display={imgDisp} zIndex={true}/>
       </BodyLeft>
       <BodyRight>
+        <div className='planet-text'>
           <H1> {templateData.name} </H1>
           <P style={{margin: "1.2em 0", height: "11em"}}> {content} </P>
           <P style={{color: `${colors.darkGrey}`, marginBottom: "0.2em"}}>
@@ -91,7 +110,9 @@ const handleGeology = (e) =>{
             <a href={source} target="_blank" rel='noreferrer'> Wikipedia </a>
             <img src='./assets/icon-source.svg' alt='Link to planet facts on wikipedia'/> 
           </P>
-          <Button activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleOverview} active={isActive}>
+        </div>
+        <ButtonGrp>
+           <Button activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleOverview} active={isActive}>
             <H3>
               <Span>01</Span>Overview
             </H3>
@@ -106,6 +127,8 @@ const handleGeology = (e) =>{
               <Span>03</Span>Surface Geology
             </H3>
           </Button>
+        </ButtonGrp>
+          
       </BodyRight>
      </section>
      <section className='section2'>
@@ -149,6 +172,22 @@ margin: 1em 0;
 display:flex;
 flex-direction: column;
 justify-content:left;
+`
+const PhoneGroup = styled.div`
+display: flex;
+padding-top: 0.2em;
+justify-content: space-between;
+border-bottom: 1px solid #838391;
+  @media (min-width: 728px){
+    display: none;
+  }
+`
+const ButtonGrp = styled.div`
+display: none;
+
+@media (min-width: 728px){
+    display: none;
+}
 `
 
 export default PlanetBodyTemplate
