@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, {useState} from "react";
+import React, {useState , useEffect} from "react";
 import styled from "styled-components";
 import { colors } from "../Shared/colors";
 import { H1, H2, H3, H4, P } from "../Shared/typography";
@@ -7,13 +7,30 @@ import nav from "../assets/icon-hamburger.svg"
 import { Link } from "react-router-dom";
 import PhoneNav from "./PhoneNav";
 
+let disp = true
+
 const Header = ({}) => {
+
+
+
   const [hamClicked, setHamClicked]= useState(false)
+
   const [dispNav, setDispNav] = useState(false)
+
+
   const handleHamClick =()=>{
     setHamClicked(!hamClicked)
     setDispNav(!dispNav)
   }
+
+  useEffect(() => {
+    if (dispNav) {
+      document.body.style.overflow = 'hidden'
+    }
+    else{
+      document.body.style.overflow = 'scroll'
+    }
+  }, [dispNav])
 
   return (
     <div>
@@ -35,8 +52,11 @@ const Header = ({}) => {
           <img onClick={handleHamClick} src= {nav} />
         </HamBurger>
     </StyledHeader>
-    <PhoneNav display={dispNav}/>
-    </div>
+    <>{ dispNav &&
+        <PhoneNav display={true}/>
+      }
+    </>
+  </div>
     
   );
 };
@@ -88,7 +108,7 @@ const HamBurger = styled.section`
     display: none;
   }
   opacity:${(props) =>
-    props.hamClicked?0.2 : 1};
+    props.hamClicked  ? 0.2 : 1};
 `
 
 export default Header;

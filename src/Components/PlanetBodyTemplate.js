@@ -181,9 +181,11 @@ display: flex;
 padding-top: 0.2em;
 justify-content: space-between;
 border-bottom: 1px solid #838391;
-  @media only and screen(min-width: 728px){
-    display: none;
-  }
+
+@media only and screen (min-width: 768px){
+  display: none;
+}
+
 `
 const ButtonGrp = styled.div`
 display: none;
