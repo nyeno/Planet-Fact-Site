@@ -1,36 +1,34 @@
-/* eslint-disable */
-import React, {useState , useEffect} from "react";
+import React, {useState , useEffect, useContext} from "react";
 import styled from "styled-components";
 import { colors } from "../Shared/colors";
 import { H1, H2, H3, H4, P } from "../Shared/typography";
 import nav from "../assets/icon-hamburger.svg"
 import { Link } from "react-router-dom";
 import PhoneNav from "./PhoneNav";
-
-let disp = true
+import { AppContext } from "../context/AppContext";
 
 const Header = ({}) => {
-
-
-
-  const [hamClicked, setHamClicked]= useState(false)
-
-  const [dispNav, setDispNav] = useState(false)
-
-
+  const [state, dispatch] = useContext(AppContext);
+  const [hamClicked,setHamClicked]=useState(state.hamShow)
+  useEffect(() => {
+    setHamClicked(state.hamShow)
+  }, [state])
+  
   const handleHamClick =()=>{
-    setHamClicked(!hamClicked)
-    setDispNav(!dispNav)
+    dispatch({
+        type: "HAMBURGER_SHOW",
+        payload:!state.hamShow
+      });
   }
 
   useEffect(() => {
-    if (dispNav) {
+    if (hamClicked) {
       document.body.style.overflow = 'hidden'
     }
     else{
       document.body.style.overflow = 'scroll'
     }
-  }, [dispNav])
+  }, [hamClicked])
 
   return (
     <div>
@@ -52,7 +50,7 @@ const Header = ({}) => {
           <img onClick={handleHamClick} src= {nav} />
         </HamBurger>
     </StyledHeader>
-    <>{ dispNav &&
+    <>{ hamClicked &&
         <PhoneNav display={true}/>
       }
     </>
