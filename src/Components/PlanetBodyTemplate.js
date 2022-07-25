@@ -195,7 +195,7 @@ const BodyLeft = styled.div`
   display: flex;
   justify-content: center;
   align-self: center;
-  margin: 4.75em auto 2em;
+  margin: 4.75em auto 5em;
   flex: 2;
   height: 100%;
   width: 100%;
@@ -221,7 +221,7 @@ const BodyRight = styled.div`
   }
   @media screen and (min-width: 1024px) {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-columns: 1fr;
     align-items: start;
     grid-gap: 1em;
@@ -297,6 +297,7 @@ const Section1 = styled.section`
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
     justify-content: center;
+    
   }
 `;
 

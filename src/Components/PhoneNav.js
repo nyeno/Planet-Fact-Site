@@ -1,14 +1,23 @@
 /* eslint-disable */
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import styled from "styled-components";
 import { colors } from "../Shared/colors";
-import { H1, H2, H3, H4, P } from "../Shared/typography";
+import { H4 } from "../Shared/typography";
 import nav from "../assets/icon-hamburger.svg";
 import { Link } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
-const PhoneNav = ({ display, ham }) => {
+const PhoneNav = ({ display }) => {
+  const [state, dispatch] = useContext(AppContext);
   const [showNav, setShowNav] = useState(true);
+  const handleNavclick=()=>{
+    setShowNav(false)
+    dispatch({
+      type: "HAMBURGER_SHOW",
+      payload:!state.hamShow
+    });
 
+  }
   return (
     <>
       {showNav && (
@@ -16,7 +25,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link"
             to={`/mercury`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-mercury.svg"
@@ -28,7 +37,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link"
             to={`/venus`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-venus.svg"
@@ -40,7 +49,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link"
             to={`/earth`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-earth.svg"
@@ -52,7 +61,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link"
             to={`/mars`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-mars.svg"
@@ -64,7 +73,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link"
             to={`/jupiter`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-jupiter.svg"
@@ -76,7 +85,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link"
             to={`/saturn`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-saturn.svg"
@@ -88,7 +97,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link"
             to={`/uranus`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-uranus.svg"
@@ -100,7 +109,7 @@ const PhoneNav = ({ display, ham }) => {
           <StyledLink
             className="Link last"
             to={`/neptune`}
-            onClick={() => setShowNav(false)}
+            onClick={handleNavclick}
           >
             <img
               src="./assets/planet-neptune.svg"

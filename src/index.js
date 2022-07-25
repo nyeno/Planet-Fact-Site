@@ -4,14 +4,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { AppContextProvider } from "./context/AppContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
+     <AppContextProvider>
     <Routes>
       <Route path="/" element={<App />}></Route>
       <Route path=":id" element={<App />} />
     </Routes>
+    </AppContextProvider>
   </BrowserRouter>
 );
 

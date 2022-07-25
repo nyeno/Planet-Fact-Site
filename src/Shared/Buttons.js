@@ -6,7 +6,6 @@ const Button = ({
   color,
   background,
   active,
-  hoverColor,
   activeColor,
   setActive,
   width,
