@@ -1,24 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&family=League+Spartan:wght@400;500;700&display=swap');
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing:border-box; 
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&family=League+Spartan:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.App{
-    background-image: url("/src/assets/background-stars.svg");
-    background-size: cover;
-    background-color: #070724;
-    
-
+.App {
+  background-image: url("/src/assets/background-stars.svg");
+  background-size: cover;
+  background-color: #070724;
 }
-.Link{
+.Link {
   text-decoration: none;
 }
-a{
+a {
   color: #838391;
   margin: 0 0.5em;
 }
 
-.planet-fact{
-  
+.planet-fact {
 }

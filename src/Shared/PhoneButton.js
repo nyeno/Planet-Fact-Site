@@ -9,7 +9,7 @@ const PhoneButton = ({
   hoverColor,
   activeColor,
   setActive,
-  width
+  width,
 }) => {
   return (
     <StyledButton
@@ -26,10 +26,9 @@ const PhoneButton = ({
 };
 
 export const StyledButton = styled.div`
-& > H4{
-    color: ${(props) =>
-        props.active ? colors['white'] : colors['lightGrey']};
-}
+  & > H4 {
+    color: ${(props) => (props.active ? colors["white"] : colors["lightGrey"])};
+  }
   border-width: 0 0 0.4em 0;
   border-style: solid;
   border-color: ${(props) =>
@@ -39,11 +38,10 @@ export const StyledButton = styled.div`
   width: 100%;
   &:hover {
     border-color: ${(props) =>
-      props.active ? colors[props.activeColor] : colors['darkGrey']};
+      props.active ? colors[props.activeColor] : colors["darkGrey"]};
     cursor: pointer;
     transition: ease-in-out 250ms;
   }
- text-align: center;
+  text-align: center;
 `;
 export default PhoneButton;
-
