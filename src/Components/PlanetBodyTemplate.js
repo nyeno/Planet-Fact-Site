@@ -209,7 +209,7 @@ const BodyRight = styled.div`
     padding: 1.5em;
   }
 
-  @media screen and (min-width: 728px) {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -221,7 +221,7 @@ const BodyRight = styled.div`
   }
   @media screen and (min-width: 1024px) {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     align-items: start;
     grid-gap: 1em;
