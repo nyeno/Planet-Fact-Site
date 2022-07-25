@@ -17,33 +17,4 @@ a{
   color: #838391;
   margin: 0 0.5em;
 }
-.planet-fact{
-  
-}
 
-
-.section1{
-  display: flex;
-  flex: 1;
-  margin-bottom: 4em;
-  @media only screen and (min-width: 768px){
-    flex-direction: column;
-    align-items:center;
-  }
-  @media only screen and (min-width: 1024px){
-    flex-direction: row;
-    justify-content: center
-  }
-}
-.section2{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1em;
-
-}
-.phone-button{
-  
-  @media screen {
-    
-  }
-}

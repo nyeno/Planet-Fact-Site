@@ -8,6 +8,7 @@ import Button from '../Shared/Buttons';
 import { colors } from '../Shared/colors';
 import Image from '../Shared/image';
 import PhoneButton from '../Shared/PhoneButton';
+import Info from '../Shared/Info';
 
 const PlanetBodyTemplate = ({}) => {
   const [currentPage, setCurrentPage] =useState(null)
@@ -96,21 +97,21 @@ const handleGeology = (e) =>{
             </H4>
           </PhoneButton>
      </PhoneGroup> 
-     <section className='section1'>
+     <Section1>
       <BodyLeft>
         <Image src= {imgSrc} display={true} />
         <Image src= {templateData.images.geology} display={imgDisp} zIndex={true}/>
       </BodyLeft>
       <BodyRight>
-        <div className='planet-text'>
+        <PlanetText>
           <H1> {templateData.name} </H1>
-          <P style={{margin: "1.2em 0", height: "11em"}}> {content} </P>
-          <P style={{color: `${colors.darkGrey}`, marginBottom: "0.2em"}}>
+          <P style={{height: "11em"}}> {content} </P>
+          <P style={{color: `${colors.darkGrey}`}}>
             Source:  
             <a href={source} target="_blank" rel='noreferrer'> Wikipedia </a>
             <img src='./assets/icon-source.svg' alt='Link to planet facts on wikipedia'/> 
           </P>
-        </div>
+        </PlanetText>
         <ButtonGrp>
            <Button activeColor={`${templateData.name.toLowerCase()}`} setActive = {handleOverview} active={isActive}>
             <H3>
@@ -130,8 +131,8 @@ const handleGeology = (e) =>{
         </ButtonGrp>
           
       </BodyRight>
-     </section>
-     <section className='section2'>
+     </Section1>
+     <Section2>
       <Info>
         <H4 style={{color:`${colors.lightGrey}`}}>Rotation Time</H4>
         <H2>{templateData.rotation}</H2>  
@@ -148,7 +149,7 @@ const handleGeology = (e) =>{
         <H4 style={{color:`${colors.lightGrey}`}}>Average Temperature</H4>
         <H2>{templateData.temperature}</H2>  
       </Info>
-     </section> 
+     </Section2> 
 
     </div>
   )
@@ -156,29 +157,31 @@ const handleGeology = (e) =>{
 const BodyLeft = styled.div`
    position: relative; 
    display: flex;
+   justify-content: center;
+   margin: 4.75em auto 5em;
    flex: 2;
+
 `
 const BodyRight = styled.div`
    flex: 1;
+   text-align: center;
+
+   & > P{
+    text-align: center;
+    padding: 1.5em
+   }
 `
 const Span = styled.span`
   margin-right: 1em;
   color: ${colors.lightGrey}
 `
-const Info = styled.div`
-border: 1px solid ${colors['darkGrey']};
-padding: 0.625em 1.25em;
-margin: 1em 0;
-display:flex;
-flex-direction: column;
-justify-content:left;
-`
+
 const PhoneGroup = styled.div`
 display: flex;
 padding-top: 0.2em;
 justify-content: space-between;
 border-bottom: 1px solid #838391;
-  @media (min-width: 728px){
+  @media only and screen(min-width: 728px){
     display: none;
   }
 `
@@ -188,6 +191,40 @@ display: none;
 @media (min-width: 728px){
     display: none;
 }
+`
+
+const Section2 = styled.section`
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+  padding: 1.75em 1.5em;
+  @media only and screen(min-width: 728px){
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+`
+
+const Section1 = styled.section`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  
+  @media only screen and (min-width: 768px){
+    align-items: space-between;
+    margin-bottom: 4em;
+  }
+  @media only screen and (min-width: 1024px){
+    flex-direction: row;
+    justify-content: center
+  }
+
+`
+const PlanetText = styled.div`
+  text-align: center;
+  padding: 0 1em;
+  & > P{
+    margin: 1em 0;
+  }
 `
 
 export default PlanetBodyTemplate

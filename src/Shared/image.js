@@ -28,7 +28,7 @@ export const StyledImg = styled.img`
   width: 80%;
   ${props => props.zIndex  && `
          position: absolute;
-         top: 70%;
+         top: 50%;
          left: calc(50% - 5em);
          z-index:1;
          width: 10em;
