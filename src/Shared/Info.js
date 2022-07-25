@@ -18,10 +18,12 @@ display:flex;
 justify-content: space-between;
 align-items: center;
 
-@media only screen and (min-width:768px){
+@media screen and (min-width:768px){
     flex-direction: column;
-    justify-content:left;
-    padding: 0.625em 1.25em;
+    justify-content: flex-start;
+    padding: 1.1em 1em;
+    text-align: left;
+    align-items: flex-start;
 }
 ;
 `

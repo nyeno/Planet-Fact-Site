@@ -39,14 +39,14 @@ const Header = ({}) => {
           <H2>The planets</H2>
         </Logo>
         <Nav>
-        <Link className="Link" to={`/mercury`}><H4>Mercury</H4></Link>
-        <Link className="Link" to={`/venus`}> <H4>Venus</H4></Link>
-        <Link className="Link" to={`/earth`}><H4>Earth</H4></Link>
-        <Link className="Link" to={`/mars`}><H4>Mars</H4></Link>
-        <Link className="Link" to={`/jupiter`}> <H4>Jupiter</H4></Link>
-        <Link className="Link" to={`/saturn`}><H4>Saturn</H4></Link>
-        <Link className="Link" to={`/uranus`}><H4>Uranus</H4></Link>
-        <Link className="Link" to={`/neptune`}> <H4>Neptune</H4></Link>
+          <Link className="Link" to={`/mercury`}><H4>Mercury</H4></Link>
+          <Link className="Link" to={`/venus`}> <H4>Venus</H4></Link>
+          <Link className="Link" to={`/earth`}><H4>Earth</H4></Link>
+          <Link className="Link" to={`/mars`}><H4>Mars</H4></Link>
+          <Link className="Link" to={`/jupiter`}> <H4>Jupiter</H4></Link>
+          <Link className="Link" to={`/saturn`}><H4>Saturn</H4></Link>
+          <Link className="Link" to={`/uranus`}><H4>Uranus</H4></Link>
+          <Link className="Link" to={`/neptune`}> <H4>Neptune</H4></Link>
         </Nav>
         <HamBurger hamClicked={hamClicked}>
           <img onClick={handleHamClick} src= {nav} />

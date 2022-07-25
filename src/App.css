@@ -8,6 +8,7 @@
     background-image: url("/src/assets/background-stars.svg");
     background-size: cover;
     background-color: #070724;
+    
 
 }
 .Link{
@@ -18,3 +19,6 @@ a{
   margin: 0 0.5em;
 }
 
+.planet-fact{
+  
+}

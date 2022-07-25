@@ -146,11 +146,10 @@ const handleGeology = (e) =>{
         <H2>{templateData.radius}</H2>  
       </Info>
       <Info>
-        <H4 style={{color:`${colors.lightGrey}`}}>Average Temperature</H4>
+        <H4 style={{color:`${colors.lightGrey}`}}>Average Temp.</H4>
         <H2>{templateData.temperature}</H2>  
       </Info>
      </Section2> 
-
     </div>
   )
 }
@@ -170,10 +169,34 @@ const BodyRight = styled.div`
     text-align: center;
     padding: 1.5em
    }
+
+   @media screen and (min-width: 728px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 1em;
+    margin: 0 2.5em;
+    & > ButtonGroup{
+      align-content: center;
+     }
+   }
 `
 const Span = styled.span`
   margin-right: 1em;
   color: ${colors.lightGrey}
+`
+
+const PlanetText = styled.div`
+  text-align: center;
+  padding: 0 1em;
+  & > P{
+    margin: 1em 0;
+  }
+  @media screen and (min-width: 728px){
+    & > *{
+      text-align: left;
+     }
+  }
 `
 
 const PhoneGroup = styled.div`
@@ -181,8 +204,7 @@ display: flex;
 padding-top: 0.2em;
 justify-content: space-between;
 border-bottom: 1px solid #838391;
-
-@media only and screen (min-width: 768px){
+@media (min-width: 728px){
   display: none;
 }
 
@@ -190,9 +212,10 @@ border-bottom: 1px solid #838391;
 const ButtonGrp = styled.div`
 display: none;
 
-@media (min-width: 728px){
-    display: none;
-}
+  @media (min-width: 728px){
+      display: inline-block;
+      width: 100%
+  }
 `
 
 const Section2 = styled.section`
@@ -200,8 +223,9 @@ const Section2 = styled.section`
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
   padding: 1.75em 1.5em;
-  @media only and screen(min-width: 728px){
+  @media screen and (min-width: 728px){
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 
 `
@@ -221,12 +245,6 @@ const Section1 = styled.section`
   }
 
 `
-const PlanetText = styled.div`
-  text-align: center;
-  padding: 0 1em;
-  & > P{
-    margin: 1em 0;
-  }
-`
+
 
 export default PlanetBodyTemplate
