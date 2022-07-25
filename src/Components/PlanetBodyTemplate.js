@@ -165,9 +165,11 @@ const BodyLeft = styled.div`
    position: relative; 
    display: flex;
    justify-content: center;
+   align-self: center;
    margin: 4.75em auto 5em;
    flex: 2;
-
+   height: 100%;
+   width:100%
 `
 const BodyRight = styled.div`
    flex: 1;
@@ -215,6 +217,7 @@ const PlanetText = styled.div`
      }
   }
   @media screen and (min-width: 1024px){
+    padding: 0;
     & > *{
       margin: 0.5em 0;
      }
@@ -252,7 +255,7 @@ const Section2 = styled.section`
     padding: 1em 1.5em 2.5em;
   }
   @media screen and (min-width:1024px){
-    margin: 1em 2.5em;
+    margin: 0em 2.5em;
   }
 
 `

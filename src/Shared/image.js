@@ -25,12 +25,12 @@ export const StyledImg = styled.img`
   transition: ease-in-out 250ms;
   margin: 1em auto;
   justify-content:left;
-  width: 80%;
+  max-width: 80%;
   ${props => props.zIndex  && `
          position: absolute;
          top: 50%;
          left: calc(50% - 5em);
-         z-index:1;
+         z-index: 1;
          width: 10em;
     `}
 `;
