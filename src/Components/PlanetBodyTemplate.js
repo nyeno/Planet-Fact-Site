@@ -39,7 +39,15 @@ const PlanetBodyTemplate = ({}) => {
          currentData = currentData??data.filter(singledata=>singledata.name==='Mercury')[0];
      setTemplateData(currentData)
      setImgSrc(currentData.images.planet)
-     //console.log(currentData)
+
+      onSetActive(true)
+      onSetInternal(false)
+      onSetSurface(false)
+      
+      setContent(currentData.overview.content)
+      setSource(currentData.overview.source)
+      setImgDsp(false)
+
     }
   },[currentPage])
 
@@ -167,7 +175,7 @@ const BodyRight = styled.div`
 
    & > P{
     text-align: center;
-    padding: 1.5em
+    padding: 1.5em;
    }
 
    @media screen and (min-width: 728px){
@@ -179,6 +187,15 @@ const BodyRight = styled.div`
     & > ButtonGroup{
       align-content: center;
      }
+   }
+   @media screen and (min-width: 1024px){
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: start;
+    grid-gap: 1em;
+    padding: 1.5em 2.5em;
+    
    }
 `
 const Span = styled.span`
@@ -197,6 +214,11 @@ const PlanetText = styled.div`
       text-align: left;
      }
   }
+  @media screen and (min-width: 1024px){
+    & > *{
+      margin: 0.5em 0;
+     }
+  }
 `
 
 const PhoneGroup = styled.div`
@@ -212,10 +234,11 @@ border-bottom: 1px solid #838391;
 const ButtonGrp = styled.div`
 display: none;
 
-  @media (min-width: 728px){
+  @media screen and (min-width: 728px){
       display: inline-block;
       width: 100%
   }
+
 `
 
 const Section2 = styled.section`
@@ -226,6 +249,10 @@ const Section2 = styled.section`
   @media screen and (min-width: 728px){
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    padding: 1em 1.5em 2.5em;
+  }
+  @media screen and (min-width:1024px){
+    margin: 1em 2.5em;
   }
 
 `
@@ -237,7 +264,7 @@ const Section1 = styled.section`
   
   @media only screen and (min-width: 768px){
     align-items: space-between;
-    margin-bottom: 4em;
+    margin-bottom: 0em;
   }
   @media only screen and (min-width: 1024px){
     flex-direction: row;
