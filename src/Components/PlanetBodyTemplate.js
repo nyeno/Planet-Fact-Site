@@ -257,9 +257,14 @@ const PhoneGroup = styled.div`
   padding-top: 0.2em;
   justify-content: space-between;
   border-bottom: 1px solid #838391;
+  &> *{
+    margin: 0.825em 1.25em 0;
+    padding-bottom: 0.2em;
+  }
   @media (min-width: 728px) {
     display: none;
   }
+ 
 `;
 const ButtonGrp = styled.div`
   display: none;

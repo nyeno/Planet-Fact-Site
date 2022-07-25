@@ -32,7 +32,7 @@ export const StyledButton = styled.div`
   border-style: solid;
   border-color: ${(props) =>
     props.active ? colors[props.activeColor] : "transparent"};
-  padding: 0.625em 1.25em;
+  
   transition: ease-in-out 250ms;
   width: 100%;
   &:hover {
