@@ -1,15 +1,17 @@
 # Planets Fact Site Project
 Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
-**Link to project:** https://taeyang-planet-facts.netlify.app/
+**Link to project:** <a href="https://taeyang-planet-facts.netlify.app/" target="_blank">View here</a>
 
-![alt tag](http://placecorgi.com/1200/650)
+Solarized dark             |  Solarized Ocean           
+:-------------------------:|:-------------------------:
+![](https://...Dark.png)   |  ![](https://...Ocean.png)
 
 ## How It's Made:
 
 **Tech used:**  ![JAVASCRIPT BADGE](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=blac)![REACT BADGE](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![HTML BADGE](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS BADGE](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)![STYLED COMPONENTS BADGE](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)![REACT ROUTER BADGE](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-
+This project uses React to create a beautiful site to highlight the surface geology, internal structure and general overview of the planets in our solar system. I learnt 
 
 
 ## Optimizations
