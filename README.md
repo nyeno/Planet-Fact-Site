@@ -5,7 +5,7 @@ Write a short sentence or two about this project and what it does. Be sure to in
 
 Solarized dark             |  Solarized Ocean           
 :-------------------------:|:-------------------------:
-![](https://...Dark.png)   |  ![](https://...Ocean.png)
+![](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/phone.png)   |  ![](https://...Ocean.png)
 
 ## How It's Made:
 
