@@ -42,7 +42,7 @@ Here are a couple more projects I have worked on
         Tip Calculator
     </td>
   </tr>
-  <tr height="100">
+  <tr height="60">
     <td width="33.3%"  style="align:center;" valign="top">
         <a target="_blank" href="https://github.com/nyeno/Todo-List">To-do List</a>
         <br />
