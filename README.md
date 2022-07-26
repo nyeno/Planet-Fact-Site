@@ -67,8 +67,3 @@ Here are a couple more projects I have worked on
   </tr>
 </table>
 
-**To-do List App:** https://github.com/alecortega/palettable
-
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
-
-**Patch Panel:** https://github.com/alecortega/patch-panel
