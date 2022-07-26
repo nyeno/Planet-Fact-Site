@@ -42,7 +42,7 @@ Here are a couple more projects I have worked on
         Tip Calculator
     </td>
   </tr>
-  <tr height="100">
+  <tr>
     <td width="33.3%"  style="align:center;" valign="top">
         <a target="_blank" href="https://github.com/nyeno/Todo-List">To-do List</a>
         <br />
@@ -54,7 +54,7 @@ Here are a couple more projects I have worked on
         <a target="_blank" href="https://eno-sunnyside-agency.netlify.app/">devFind</a>
         <br />
         <a target="_blank" href="https://github.com/nyeno/Frontend-Mentor-Projects/tree/main/sunnyside-agency-landing-page-main/">
-          <img src="https://github.com/nyeno/Frontend-Mentor-Projects/blob/main/sunnyside-agency-landing-page-main/screenshot1.png" width="100%" alt="SunnySide.org"/>
+          <img src="https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/dsk.jpg" width="100%" alt="SunnySide.org"/>
         </a>
     </td>
     <td width="33.3%" valign="top">
