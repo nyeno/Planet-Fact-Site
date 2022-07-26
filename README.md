@@ -4,11 +4,11 @@ Write a short sentence or two about this project and what it does. Be sure to in
 **Link to project:** <a href="https://taeyang-planet-facts.netlify.app/" target="_blank">View here</a>
 
 
-![Small Screens](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/phone.png)   
+![Small Screens](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/phone.png)  ![Medium Screens](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/tab.png) ![Large Screens](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/large.png) 
 
-![Medium Screens](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/tab.png) 
 
-![Large Screens](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/large.png) 
+
+
 
 
 ## How It's Made:
