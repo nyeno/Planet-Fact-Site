@@ -5,9 +5,9 @@ Write a short sentence or two about this project and what it does. Be sure to in
 
 
 
-Small Screen View          |  Meduim screen view
-:-------------------------:|:-------------------------:
-![](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/phone.png)  |  ![](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/tab.png)
+Small Screen View          |  Meduim screen view       | Large Screens            | 
+:-------------------------:|:-------------------------:|:-------------------------:|
+![](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/phone.png)  |  ![](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/tab.png)| ![](https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/large.png) 
 
 
 
