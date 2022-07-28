@@ -51,7 +51,7 @@ Here are a couple more projects I have worked on
         </a>
     </td>
     <td width="33.3%" valign="top">
-        <a target="_blank" href="https://eno-sunnyside-agency.netlify.app/">devFind</a>
+        <a target="_blank" href="https://eno-sunnyside-agency.netlify.app/">SunnySide.org</a>
         <br />
         <a target="_blank" href="https://github.com/nyeno/Frontend-Mentor-Projects/tree/main/sunnyside-agency-landing-page-main/">
           <img src="https://github.com/nyeno/Planet-Fact-Site/blob/main/shots/dsk.jpg" width="100%" alt="SunnySide.org"/>
