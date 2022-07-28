@@ -21,11 +21,11 @@ This project uses React to create a beautiful site to highlight the surface geol
 
 ## Optimizations
 
-When I improve this project, I will refactor my components to be more reusale. I already refactored some elements like the buttons, typography, images, etc to be reusable but I would take it a bit further by nmaking my components truly lean and reusable. 
+When I improve this project, I will refactor my components to be more reusale. I already refactored some elements like the buttons, typography, images, etc to be reusable but I would take it a bit further by making my components truly lean and focused. 
 
 ## Lessons Learned:
 
-Because this is my first full React project, there are a lot of new technologies that I have learned. Stled Components, props in React, managiing state and a lot more. The most interesting thing I learnt however, will be how to use Context API. I plan to dive deeper into the nuances of context API as well as Redux soon. 
+Because this is my first full React project, there are a lot of new technologies that I have learned. Styled Components, props in React, managing state and a lot more. The most interesting thing I learnt however, will be how to use Context API. I plan to dive deeper into the nuances of context API as well as Redux soon. 
 
 ## More Projects:
 Here are a couple more projects I have worked on
